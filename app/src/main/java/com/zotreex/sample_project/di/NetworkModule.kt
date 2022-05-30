@@ -13,7 +13,7 @@ class NetworkModule {
     fun providePhoneSpecificationsApi(): PhoneSpecificationsService {
         val retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("http://api-mobilespecs.azharimm.site/v2/")
+            .baseUrl("https://api-mobilespecs.azharimm.site/v2/")
             .build()
         return retrofit.create()
     }

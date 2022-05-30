@@ -2,6 +2,7 @@ package com.zotreex.sample_project.domain.api
 
 import com.zotreex.sample_project.domain.data.*
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface PhoneSpecificationsService {
@@ -15,7 +16,7 @@ interface PhoneSpecificationsService {
     ): ResponseResult<PhonePage>
 
     @GET("{phone_slug}")
-    suspend fun getPhoneSpecification(@Query("phone_slug") phone_slug: String): ResponseResult<PhoneSpecification>
+    suspend fun getPhoneSpecification(@Path("phone_slug") phone_slug: String): ResponseResult<PhoneSpecification>
 
     @GET("search")
     suspend fun getSearchResult(@Query("query") query: String): ResponseResult<PhoneList>

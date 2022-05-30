@@ -2,7 +2,8 @@ package com.zotreex.sample_project.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.zotreex.sample_project.ui.SampleViewModel
+import com.zotreex.sample_project.ui.PhoneListViewModel
+import com.zotreex.sample_project.ui.PhoneSpecificationViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -15,6 +16,11 @@ abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(SampleViewModel::class)
-    abstract fun sampleViewModel(sampleViewModel: SampleViewModel): ViewModel
+    @ViewModelKey(PhoneListViewModel::class)
+    abstract fun phoneListViewModel(phoneListViewModel: PhoneListViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(PhoneSpecificationViewModel::class)
+    abstract fun phoneSpecificationViewModel(phoneSpecificationViewModel: PhoneSpecificationViewModel): ViewModel
 }
