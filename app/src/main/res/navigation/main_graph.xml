@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
     app:startDestination="@id/phoneListFragment">
 
@@ -11,9 +12,45 @@
         <action
             android:id="@+id/action_phoneListFragment_to_phoneSpecificationFragment"
             app:destination="@id/phoneSpecificationFragment" />
+        <action
+            android:id="@+id/action_phoneListFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_phoneListFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneSpecificationFragment"
         android:name="com.zotreex.sample_project.ui.PhoneSpecificationFragment"
-        android:label="PhoneSpecificationFragment" />
+        android:label="PhoneSpecificationFragment" >
+        <action
+            android:id="@+id/action_phoneSpecificationFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_phoneSpecificationFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.zotreex.sample_project.ui.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_phoneListFragment"
+            app:destination="@id/phoneListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.zotreex.sample_project.ui.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_phoneListFragment"
+            app:destination="@id/phoneListFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_phoneSpecificationFragment"
+            app:destination="@id/phoneSpecificationFragment" />
+    </fragment>
 </navigation>

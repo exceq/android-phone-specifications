@@ -7,7 +7,7 @@
         android:title="Телефоны" />
 
     <item
-        android:id="@+id/fragment_search"
+        android:id="@+id/action_phoneListFragment_to_searchFragment"
         android:icon="@drawable/ic_baseline_search_24"
         android:actionLayout="@layout/fragment_phone_specification"
         android:title="Поиск" />
