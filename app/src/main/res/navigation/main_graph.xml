@@ -2,10 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_graph"
-    app:startDestination="@id/sampleFragment">
+    app:startDestination="@id/phoneListFragment">
 
     <fragment
-        android:id="@+id/sampleFragment"
-        android:name="com.zotreex.sample_project.ui.SampleFragment"
-        android:label="SampleFragment" />
+        android:id="@+id/phoneListFragment"
+        android:name="com.zotreex.sample_project.ui.PhoneListFragment"
+        android:label="PhoneListFragment" >
+        <action
+            android:id="@+id/action_phoneListFragment_to_phoneSpecificationFragment"
+            app:destination="@id/phoneSpecificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneSpecificationFragment"
+        android:name="com.zotreex.sample_project.ui.PhoneSpecificationFragment"
+        android:label="PhoneSpecificationFragment" />
 </navigation>

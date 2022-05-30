@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragment_phone_list"
+        android:icon="@drawable/ic_baseline_smartphone_24"
+        android:actionLayout="@layout/phone_list_item"
+        android:title="Телефоны" />
+
+    <item
+        android:id="@+id/fragment_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:actionLayout="@layout/fragment_phone_specification"
+        android:title="Поиск" />
+
+    <item
+        android:id="@+id/fragment_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:actionLayout="@layout/fragment_phone_specification"
+        android:title="Настройки" />
+</menu>
